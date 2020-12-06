@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://BorderScene.gd" type="Script" id=1]
+
+[node name="Border" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BorderImage" type="Sprite" parent="."]
+centered = false
+
+[node name="BackButton" type="Button" parent="."]
+margin_left = 1902.0
+margin_top = 2.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0.0980392, 0.0862745, 0.0862745, 0.384314 )
+text = "x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
